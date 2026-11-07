@@ -1,0 +1,6 @@
+{
+  "name": "AIRWAVE", "short_name": "AIRWAVE",
+  "start_url": "./", "scope": "./", "display": "standalone",
+  "background_color": "#14171a", "theme_color": "#14171a",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

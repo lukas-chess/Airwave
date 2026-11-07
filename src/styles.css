@@ -1,0 +1,31 @@
+:root{--bg:#14171a;--panel:#1d2227;--line:#2b333a;--text:#e6edf1;--muted:#8a98a3;--acc:#2ec4b6;--warn:#ff8a5b}
+:root[data-theme=light]{--bg:#eef2f4;--panel:#fff;--line:#d3dce1;--text:#16202a;--muted:#5d6b76;--acc:#0b8f84;--warn:#c4410f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.app{display:grid;grid-template-columns:190px 1fr;min-height:100dvh}
+nav{background:var(--panel);border-right:1px solid var(--line);padding:16px 8px;display:flex;flex-direction:column;gap:4px}
+.logo{font-weight:800;letter-spacing:.2em;color:var(--acc);padding:0 12px 14px}
+nav button{text-align:left;border:0;background:none;color:var(--muted);padding:10px 12px;border-radius:6px;font:inherit;cursor:pointer}
+nav button.on{background:var(--bg);color:var(--acc)}
+main{padding:16px;max-width:1100px}
+h2,h3{margin:0 0 8px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:6px 0}
+.track{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line)}
+.title{font-size:18px;font-weight:600}
+.muted{color:var(--muted)}.warn{color:var(--warn)}
+button{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 12px;font:inherit;cursor:pointer}
+button.primary{background:var(--acc);color:#04201d;border-color:var(--acc);font-weight:600}
+button:disabled{opacity:.4}
+input[type=range]{flex:1;width:100%;accent-color:var(--acc)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.meter{height:8px;background:var(--bg);border-radius:4px;overflow:hidden;margin-top:8px}
+.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--acc) 70%,var(--warn))}
+@media(max-width:720px){
+  .app{grid-template-columns:1fr}
+  nav{position:fixed;bottom:0;left:0;right:0;flex-direction:row;overflow-x:auto;border:0;border-top:1px solid var(--line);padding:6px 6px max(6px,env(safe-area-inset-bottom));z-index:5}
+  .logo{display:none}
+  main{padding:12px 12px 84px}
+  .grid2{grid-template-columns:1fr}
+}
